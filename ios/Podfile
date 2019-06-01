@@ -1,6 +1,11 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
 
+# https://stackoverflow.com/questions/51056579/flutter-plugin-geolocator-swift-h-file-not-found/55293055#55293055
+use_frameworks!
+system('rm -rf .symlinks')
+system('mkdir -p .symlinks/plugins')
+
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
@@ -64,6 +69,7 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['SWIFT_VERSION'] = '4.2'
     end
   end
 end
