@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import './state-storage.dart';
-import '../models/user.dart';
+import 'package:flutter_connect/blocs/state-storage.dart';
+import 'package:flutter_connect/models/user.dart';
+
 import 'package:rxdart/rxdart.dart';
 
 class UserBloc {

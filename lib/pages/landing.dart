@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../services/auth.dart';
+
+import 'package:flutter_connect/services/auth.dart';
 
 class Landing extends StatelessWidget {
   final AuthService auth = AuthService();

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import '../blocs/bloc-provider.dart';
-import '../blocs/user-bloc.dart';
-import '../models/user.dart';
-import '../services/auth.dart';
+
+
+import 'package:flutter_connect/blocs/bloc-provider.dart';
+import 'package:flutter_connect/blocs/user-bloc.dart';
+import 'package:flutter_connect/models/user.dart';
+import 'package:flutter_connect/services/auth.dart';
 
 class Dashboard extends StatelessWidget {
   @override
