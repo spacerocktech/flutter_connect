@@ -15,11 +15,17 @@ class AuthService {
   Future handleGoogleSignin() async {
     GoogleSignInAccount googleUser = await _googleSignIn.signIn();
     if (googleUser == null) throw 'Authentication aborted';
+
     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-    return _auth.signInWithGoogle(
+    
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
+
+    final FirebaseUser user = await _auth.signInWithCredential(credential);
+
+    return user;
   }
 
   Future<bool> _checkUserExists(FirebaseUser user) async {

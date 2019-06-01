@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter-boilerplate/blocs/user-bloc.dart';
-import 'package:flutter-boilerplate/models/user.dart';
-import 'package:flutter-boilerplate/pages/dashboard.dart';
+import '../blocs/user-bloc.dart';
+import '..//models/user.dart';
+import '../pages/dashboard.dart';
 
 class UserFetcher extends StatefulWidget {
   final UserBloc userBloc;
