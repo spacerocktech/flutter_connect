@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../pages/landing.dart';
+//import '../pages/landing';
 
 void main() => runApp(MyApp());
 
